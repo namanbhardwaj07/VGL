@@ -1,0 +1,37 @@
+<isinclude template="components/modules" />
+
+<h1>Hello world</h1>
+
+
+
+<isset name = "a" value  = "session scope"/>
+
+<isset name = "c" value = "page scope" scope = "page" />
+
+<isset name = "d" value  = "request scope" scope = "request" />
+
+
+
+
+
+ ${session.custom.a}</br>
+ ${request.custom.d}</br>
+ ${c}</br>
+
+
+
+
+ <h3>site id : ${dw.system.Site.current.ID}</h3>
+
+
+ <h3>registered customer  : ${dw.customer.CustomerMgr.registeredCustomerCount}</h3>
+
+ <ismultiply x=3 y=4 />
+
+
+
+
+
+
+
+

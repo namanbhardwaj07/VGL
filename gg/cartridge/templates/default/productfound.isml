@@ -1,0 +1,4 @@
+<h1>product details</h1>
+<p>product name: ${pdict.name}</p>
+<p>product id: ${pdict.id}</p>
+<p>product description: ${pdict.longDescription}</p>
