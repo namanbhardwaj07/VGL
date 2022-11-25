@@ -1,0 +1,132 @@
+{
+  "step-types":
+  {
+    "script-module-step":
+    [
+      {
+        "@type-id":"custom.DownloadFileFromWebdav",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"false",
+        "@supports-organization-context":"true",
+        "description":"This step is used to download files from webdav server",
+        "module":"app_custom_jobframework_demo/cartridge/scripts/steps/downloadfeed.js",
+        "function":"webdavDownload",
+        "transactional":"false",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"RemoteFolderPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"mandatory, URL to WebDAV or SFTP folder, e.g. 'https://www.myserver.com/folder/', 'sftp://sftp.myserver.com:22/folder/'"
+            },
+            {
+              "@name":"RemoteLogin",
+              "@type":"string",
+              "@required":"true",
+              "description":"optional, login and password for WebDAV Basic Authentication or Digest Autentication or SFTP",
+              "@trim":"true"
+            },
+            {
+              "@name":"RemotePassword",
+              "@type":"string",
+              "@required":"true",
+              "@trim":"true",
+              "description":"optional, login and password for WebDAV Basic Authentication or Digest Autentication or SFTP"
+            },
+            {
+              "@name":"TempFolder",
+              "@type":"string",
+              "@required":"true",
+              "description":"mandatory, e.g. 'library', folder is underneath Impex share, src folder, folder is created if it doesn't exist yet",
+              "max-length":"50"
+            },
+            
+            {
+              "@name":"RemoteFilePattern",
+              "@type":"string",
+              "@required":"true",
+              "description":"mandatory, a regular expression, e.g. '^Library_.*\.xml$', matching files are imported in alphanumerical order"
+            }
+          ]
+        },
+        "status-codes": 
+        {
+                  "status": 
+          [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+              			  "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+              			  "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+      },
+      {
+        "@type-id":"custom.DeleteFileFromWebdav",
+        "@supports-parallel-execution":"true",
+        "@supports-site-context":"false",
+        "@supports-organization-context":"true",
+        "description":"This step is used to download files from webdav server",
+        "module":"app_custom_jobframework_demo/cartridge/scripts/steps/deletefeed.js",
+        "function":"webdavDelete",
+        "transactional":"false",
+        "timeout-in-seconds":"900",
+        "parameters":
+        {
+          "parameter":
+          [
+            {
+              "@name":"RemoteFolderPath",
+              "@type":"string",
+              "@required":"true",
+              "description":"mandatory, URL to WebDAV or SFTP folder, e.g. 'https://www.myserver.com/folder/', 'sftp://sftp.myserver.com:22/folder/'"
+            },
+            {
+              "@name":"RemoteLogin",
+              "@type":"string",
+              "@required":"true",
+              "description":"optional, login and password for WebDAV Basic Authentication or Digest Autentication or SFTP",
+              "@trim":"true"
+            },
+            {
+              "@name":"RemotePassword",
+              "@type":"string",
+              "@required":"true",
+              "@trim":"true",
+              "description":"optional, login and password for WebDAV Basic Authentication or Digest Autentication or SFTP"
+            }
+          ]
+        },
+        "status-codes": 
+        {
+                  "status": 
+          [
+                      {
+                          "@code": "ERROR",
+                          "description": "Used when the step failed with an error."
+                      },
+                      {
+                          "@code": "FINISHED",
+              			  "description": "Used when the step finished successfully."
+                      },
+                      {
+                          "@code": "FINISHED_WITH_WARNINGS",
+              			  "description": "Used when the step finished with warnings."
+                      }
+                  ]
+              }
+      }
+    ]
+  }
+}
