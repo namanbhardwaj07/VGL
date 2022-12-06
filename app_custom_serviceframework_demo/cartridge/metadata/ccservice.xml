@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="currency_converter_cred">
+        <url>https://free.currconv.com/api/v7</url>
+        <user-id>52abe449759e5bed8c31</user-id>
+        <password encrypted="true" encryption-type="common.export">gQx6D2CYGpopPjFVHKe4WzcBUnS8MwMw/UgpDLX5Pl8=</password>
+    </service-credential>
+
+    <service-profile service-profile-id="currency_converter_prf">
+        <timeout-millis>1000</timeout-millis>
+        <rate-limit-enabled>true</rate-limit-enabled>
+        <rate-limit-calls>10</rate-limit-calls>
+        <rate-limit-millis>2000</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>5</cb-calls>
+        <cb-millis>3000</cb-millis>
+    </service-profile>
+
+    <service service-id="http.currencyconverter.test">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>currency-converter</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>currency_converter_prf</profile-id>
+        <credential-id>currency_converter_cred</credential-id>
+    </service>
+
+</services>

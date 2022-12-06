@@ -1,0 +1,4 @@
+<!--- TEMPLATENAME: ccserviceresponse.isml --->
+<h1>Service Response:</h1><br/>
+
+${pdict.response}

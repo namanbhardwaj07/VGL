@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: ccresult.isml --->
+<h1>Service Response:</h1>
+
+<div>
+	${pdict.response}
+</div>

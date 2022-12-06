@@ -1,0 +1,57 @@
+<!--- TEMPLATENAME: currencyconverter.isml --->
+<isdecorate template="common/layout/page">
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-12">
+            <form
+                action="${pdict.ContinueURL}"
+                method="POST"
+                name="currency-converter-form" ${pdict.ccForm.attributes}>
+                <div class="row">
+                    <!-- Country  -->
+                    <div class="col-6">
+                        <div class="form-group
+                            ${pdict.ccForm.fromcurrency.mandatory === true ? 'required' : ''}">
+                            <label class="form-control-label" for="fromcurrency">
+                                <isprint value="${pdict.ccForm.fromcurrency.label}" encoding="htmlcontent" />
+                            </label>
+                            <select class="form-control" id="fromcurrency"
+                                <isprint value="${pdict.ccForm.fromcurrency.attributes}" encoding="off" />
+                                >
+                                <isloop items=${pdict.ccForm.fromcurrency.options} var="currency">
+                                    <option id="${currency.id}" value="${currency.htmlValue}" <isif condition="${currency.selected}">selected</isif>>${currency.label}</option>
+                                </isloop>
+                            </select>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Country  -->
+                    <div class="col-6">
+                        <div class="form-group
+                            ${pdict.ccForm.tocurrency.mandatory === true ? 'required' : ''}">
+                            <label class="form-control-label" for="tocurrency">
+                                <isprint value="${pdict.ccForm.tocurrency.label}" encoding="htmlcontent" />
+                            </label>
+                            <select class="form-control" id="tocurrency"
+                                <isprint value="${pdict.ccForm.tocurrency.attributes}" encoding="off" />
+                                >
+                                <isloop items=${pdict.ccForm.tocurrency.options} var="currency">
+                                    <option id="${currency.id}" value="${currency.htmlValue}" <isif condition="${currency.selected}">selected</isif>>${currency.label}</option>
+                                </isloop>
+                            </select>
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button type="submit" name="convert" class="btn btn-save btn-block btn-primary">${Resource.msg('button.save','account',null)}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</isdecorate>

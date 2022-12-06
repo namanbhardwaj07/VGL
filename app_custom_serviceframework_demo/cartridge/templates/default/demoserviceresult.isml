@@ -1,0 +1,3 @@
+<!--- TEMPLATENAME: httpsuccess.isml --->
+<h1>Response for Sample HTTP Request</h1><br/>
+${pdict.response}

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
+	<field formid="fromcurrency" label="From Currency" type="string" mandatory="true" default-value="USD">
+		<options>
+			<option optionid="select" label="resource.select" value=""/>
+			<option optionid="usd" 	label="USD"	value="USD"/>
+			<option optionid="inr" 	label="INR"	value="INR"/>
+		</options>	
+	</field>
+	<field formid="tocurrency" label="To Currency" type="string" mandatory="true" default-value="INR">
+		<options>
+			<option optionid="select" label="resource.select" value=""/>
+			<option optionid="inr" 	label="INR"	value="INR"/>
+			<option optionid="usd" 	label="USD"	value="USD"/>
+		</options>	
+	</field>
+	<action formid="convert" valid-form="true"/>
+</form>
