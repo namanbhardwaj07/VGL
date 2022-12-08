@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "8fe615fd-2ea4-4dae-8bfb-dc192a935539",
+		"name": "OCAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24603222"
+	},
+	"item": [
+		{
+			"name": "Shop-API",
+			"item": [
+				{
+					"name": "Get JWT Token (guest)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\" : \"guest\"\r\n}"
+						},
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10/customers/auth?client_id=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"customers",
+								"auth"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get JWT Token (registered)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dGVzdHVzZXIxQGdtYWlsLmNvbTpUZXN0QDEyMzQ=",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\" : \"credentials\"\r\n}"
+						},
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10/customers/auth?client_id=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"customers",
+								"auth"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJfdiI6IjEiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdiI6IjEiLCJleHAiOjE2NzA0OTYxNDUsImlhdCI6MTY3MDQ5NDM0NSwiaXNzIjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhIiwic3ViIjoie1wiX3ZcIjpcIjFcIixcImN1c3RvbWVyX2luZm9cIjp7XCJjdXN0b21lcl9pZFwiOlwiYWJMMW5rdFpDSW1iNlFpYTZhZ1gwZDdGazBcIixcImd1ZXN0XCI6ZmFsc2UsXCJ2aXNpdF9pZFwiOlwiMzdiMWE3NWVlNjFlZGY4MGE1ZGE5MWQ1YWRcIn19In0.dl8XgldAVo8SGRDrrSAdnbD_tnRnfYwIrohjhsPW78JgTif2kukQqnB74RgKHRx6U5CTBee8ktTVwqnmtguRT2A4p4mu-RMpuq-bt4rV6cn6xaueaa0kGAv2p8DOKF1KyGqSosfWxhFUrMcI4KRETeQI38pvTfH4j3oaucbjiNjwkUGCPs_LS_JYaTNhkdqjlRDBcyYo3h8ArKx_5YJK18aynZ00coTdezBKLTzMb7ByQTjiYk7tOi-7SSgrri89gY8EIYV9uqACQCuRVCbuc1GYu0OFr_RipfeglkIeO9tSFneyECtAPQ_Ly1PDNzHvP9abEryRODPHBKUIy7kCvD_AbZL31HBgz1cPs9BeEC-9okARuuH2_pOzYA0DKp4RJBvyCc1bmVg_pZYDSOyFHWq3Y7Y_0_jwC2FESrrLb-9uKAocy2NTBPIXZeQBHj_utQVPCd7Bk4OqX3nSdq1GRYRadcfvrrlsKRv_74vHNrhTJwBr9AjZI2C4vHvMW8C3k50YZlKiZ39AUvv_XB9iVjpZ1ZYup7jNHMv1rcbSmdsF28wQbuitTbyAlSoHFkvQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10//products/demo25518447M",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"",
+								"products",
+								"demo25518447M"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Baskets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJfdiI6IjEiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdiI6IjEiLCJleHAiOjE2NzA0OTYxNDUsImlhdCI6MTY3MDQ5NDM0NSwiaXNzIjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhIiwic3ViIjoie1wiX3ZcIjpcIjFcIixcImN1c3RvbWVyX2luZm9cIjp7XCJjdXN0b21lcl9pZFwiOlwiYWJMMW5rdFpDSW1iNlFpYTZhZ1gwZDdGazBcIixcImd1ZXN0XCI6ZmFsc2UsXCJ2aXNpdF9pZFwiOlwiMzdiMWE3NWVlNjFlZGY4MGE1ZGE5MWQ1YWRcIn19In0.dl8XgldAVo8SGRDrrSAdnbD_tnRnfYwIrohjhsPW78JgTif2kukQqnB74RgKHRx6U5CTBee8ktTVwqnmtguRT2A4p4mu-RMpuq-bt4rV6cn6xaueaa0kGAv2p8DOKF1KyGqSosfWxhFUrMcI4KRETeQI38pvTfH4j3oaucbjiNjwkUGCPs_LS_JYaTNhkdqjlRDBcyYo3h8ArKx_5YJK18aynZ00coTdezBKLTzMb7ByQTjiYk7tOi-7SSgrri89gY8EIYV9uqACQCuRVCbuc1GYu0OFr_RipfeglkIeO9tSFneyECtAPQ_Ly1PDNzHvP9abEryRODPHBKUIy7kCvD_AbZL31HBgz1cPs9BeEC-9okARuuH2_pOzYA0DKp4RJBvyCc1bmVg_pZYDSOyFHWq3Y7Y_0_jwC2FESrrLb-9uKAocy2NTBPIXZeQBHj_utQVPCd7Bk4OqX3nSdq1GRYRadcfvrrlsKRv_74vHNrhTJwBr9AjZI2C4vHvMW8C3k50YZlKiZ39AUvv_XB9iVjpZ1ZYup7jNHMv1rcbSmdsF28wQbuitTbyAlSoHFkvQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10/baskets",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"baskets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product to the Basket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJfdiI6IjEiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdiI6IjEiLCJleHAiOjE2NzA0OTYxNDUsImlhdCI6MTY3MDQ5NDM0NSwiaXNzIjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhIiwic3ViIjoie1wiX3ZcIjpcIjFcIixcImN1c3RvbWVyX2luZm9cIjp7XCJjdXN0b21lcl9pZFwiOlwiYWJMMW5rdFpDSW1iNlFpYTZhZ1gwZDdGazBcIixcImd1ZXN0XCI6ZmFsc2UsXCJ2aXNpdF9pZFwiOlwiMzdiMWE3NWVlNjFlZGY4MGE1ZGE5MWQ1YWRcIn19In0.dl8XgldAVo8SGRDrrSAdnbD_tnRnfYwIrohjhsPW78JgTif2kukQqnB74RgKHRx6U5CTBee8ktTVwqnmtguRT2A4p4mu-RMpuq-bt4rV6cn6xaueaa0kGAv2p8DOKF1KyGqSosfWxhFUrMcI4KRETeQI38pvTfH4j3oaucbjiNjwkUGCPs_LS_JYaTNhkdqjlRDBcyYo3h8ArKx_5YJK18aynZ00coTdezBKLTzMb7ByQTjiYk7tOi-7SSgrri89gY8EIYV9uqACQCuRVCbuc1GYu0OFr_RipfeglkIeO9tSFneyECtAPQ_Ly1PDNzHvP9abEryRODPHBKUIy7kCvD_AbZL31HBgz1cPs9BeEC-9okARuuH2_pOzYA0DKp4RJBvyCc1bmVg_pZYDSOyFHWq3Y7Y_0_jwC2FESrrLb-9uKAocy2NTBPIXZeQBHj_utQVPCd7Bk4OqX3nSdq1GRYRadcfvrrlsKRv_74vHNrhTJwBr9AjZI2C4vHvMW8C3k50YZlKiZ39AUvv_XB9iVjpZ1ZYup7jNHMv1rcbSmdsF28wQbuitTbyAlSoHFkvQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"product_id\" : \"demo793775064963M\",\r\n  \"quantity\" : 1.00\r\n}]"
+						},
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10//baskets/bc12e98ac85b649ce7418dbc76/items",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"",
+								"baskets",
+								"bc12e98ac85b649ce7418dbc76",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a new customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJfdiI6IjEiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdiI6IjEiLCJleHAiOjE2NzA0OTYwMzIsImlhdCI6MTY3MDQ5NDIzMiwiaXNzIjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhIiwic3ViIjoie1wiX3ZcIjpcIjFcIixcImN1c3RvbWVyX2luZm9cIjp7XCJjdXN0b21lcl9pZFwiOlwiYmNyU2o5QmFOVXVuOXdLM3FucHB5aVJrTmhcIixcImd1ZXN0XCI6dHJ1ZSxcInZpc2l0X2lkXCI6XCJiMGJiODkxYTAxNGUzZmM2YzU3ZjA4YjUwOVwifX0ifQ.dl8XgldAVo8SGRDrrSAdnbD_tnRnfYwIrohjhsPW78JgTif2kukQqnB74RgKHRx6U5CTBee8ktTVwqnmtguRT2A4p4mu-RMpuq-bt4rV6cmJnrslwHZpjvfm8CeOs1cKO3GnqwVKnHYEyMM7zcchweQI38pvTfH4j3oaucbjiNjwkUGCPs_LS_JYaTNhkdqjlRDBcyYo3h8ArKx_5YJK18aynZ00coTdezBKLTzMb7ByQTjiYk7tOi-7SSgrri89gY8EIYV9uqACQCuRVCbuc1GYu0OFr_RipfeglkIeO9vzc-4ZHEDfO0kLVkZA14dCpnpByEpPXunIAgWXYwhh2GnyjbS4bfIIiuvO7af0vs69okARuuH2_pOzYA0DKp4RVXTBLid62ZBeg0io22QEKwFHdM5FGoDGGTbMxARr09k5tDpbyMTAs0La2eX-kcMMEmjl-uiSJaqyv0-oY5R88SemoqIJPg0ZoYk63nny8ch_-tq__kiw2pkGXoPIPlRYZu78M7sY7S_yYHTXbJnMiMxLKIFtBQRdZ314OX7eJ-o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"password\":\"Test@1234\",\r\n  \"customer\": {\r\n                \"login\": \"testuser2@gmail.com\",\r\n                \"email\":\"testuser2@gmail.com\",\r\n                \"last_name\":\"test\",\r\n                \"first_name\" : \"testuser\",\r\n                \"birthday\" : \"12/12/2022\"\r\n               }\r\n}"
+						},
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10/customers",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Catalog info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJfdiI6IjEiLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdiI6IjEiLCJleHAiOjE2NzA0OTgxOTAsImlhdCI6MTY3MDQ5NjM5MCwiaXNzIjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhIiwic3ViIjoie1wiX3ZcIjpcIjFcIixcImN1c3RvbWVyX2luZm9cIjp7XCJjdXN0b21lcl9pZFwiOlwiYWJMMW5rdFpDSW1iNlFpYTZhZ1gwZDdGazBcIixcImd1ZXN0XCI6ZmFsc2UsXCJ2aXNpdF9pZFwiOlwiNmQ1NWIzNjQ4MzIxYzM0NGUwNTY4Njg4MDVcIn19In0.dl8XgldAVo8SGRDrrSAdnbD_tnRnfYwIrohjhsPW78JgTif2kukQqnB74RgKHRx6U5CTBee8ktTVwqnmtguRT9kDaS5lnUa2GsiscF6M5wHeP8LEf1VD1Mjin5JE8DrbhmXEuPlWLMY6I7owZ3VZ3uQI38pvTfH4j3oaucbjiNjwkUGCPs_LS_JYaTNhkdqjlRDBcyYo3h8ArKx_5YJK18aynZ00coTdezBKLTzMb7ByQTjiYk7tOi-7SSgrri89gY8EIYV9uqACQCuRVCbuc1GYu0OFr_RipfeglkIeO9tSFneyECtAPQ_Ly1PDNzHvP9abEryRODPHBKUIy7kCvD_AbZL31HBgz1cPs9BeEC-9okARuuH2_pOzYA0DKp4RJBvyCc1bmVg_pZYDSOyFHYiwZOZNAgpkNuY8q2yyg3-P2GGmHrv-nxTZfzvB-p3Knztxu0UIlmsHtBgCgEpUxnk-CKxW_GrkPZ89WNkW6xVkTOtl1b9eYLcQL-cmybdKx3ZOnZHvyRkTnIgxHgkCPLl00oUYq2M2R6xsI0AnukNcjEiwsjo4lYTN7knqEGtv",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"password\":\"Test@1234\",\r\n  \"customer\": {\r\n                \"login\": \"testuser2@gmail.com\",\r\n                \"email\":\"testuser2@gmail.com\",\r\n                \"last_name\":\"test\",\r\n                \"first_name\" : \"testuser\",\r\n                \"birthday\" : \"12/12/2022\"\r\n               }\r\n}"
+						},
+						"url": {
+							"raw": "https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10//categories/(mens)?conten",
+							"protocol": "https",
+							"host": [
+								"bfjp-007",
+								"sandbox",
+								"us01",
+								"dx",
+								"commercecloud",
+								"salesforce",
+								"com"
+							],
+							"path": [
+								"s",
+								"mysite",
+								"dw",
+								"shop",
+								"v22_10",
+								"",
+								"categories",
+								"(mens)"
+							],
+							"query": [
+								{
+									"key": "conten",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data-API",
+			"item": []
+		}
+	]
+}
