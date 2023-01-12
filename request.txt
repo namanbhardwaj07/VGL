@@ -1,1 +1,5 @@
-https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10/
+https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/mysite/dw/shop/v22_10/ site specific
+
+
+
+https://bfjp-007.sandbox.us01.dx.commercecloud.salesforce.com/s/-/dw/data/v22_10 global
